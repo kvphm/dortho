@@ -161,17 +161,6 @@ F 3 "~" H 4600 1600 50  0001 C CNN
 $EndComp
 $Comp
 L Device:C_Small C?
-U 1 1 6242E627
-P 4100 1600
-F 0 "C?" H 4192 1646 50  0000 L CNN
-F 1 "C_Small" H 4192 1555 50  0000 L CNN
-F 2 "" H 4100 1600 50  0001 C CNN
-F 3 "~" H 4100 1600 50  0001 C CNN
-	1    4100 1600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C?
 U 1 1 6242F072
 P 3600 1600
 F 0 "C?" H 3692 1646 50  0000 L CNN
@@ -182,29 +171,10 @@ F 3 "~" H 3600 1600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3600 1500 4100 1500
-Connection ~ 4100 1500
-Wire Wire Line
-	4100 1500 4350 1500
-Wire Wire Line
 	3600 1700 4100 1700
-Connection ~ 4100 1700
 Wire Wire Line
 	4350 1500 4350 1400
 Connection ~ 4350 1500
-Wire Wire Line
-	4200 1550 4200 1650
-$Comp
-L power:GND #PWR?
-U 1 1 62430518
-P 4200 1650
-F 0 "#PWR?" H 4200 1400 50  0001 C CNN
-F 1 "GND" H 4205 1477 50  0000 C CNN
-F 2 "" H 4200 1650 50  0001 C CNN
-F 3 "" H 4200 1650 50  0001 C CNN
-	1    4200 1650
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:+5V #PWR?
 U 1 1 62430967
@@ -1618,12 +1588,9 @@ Wire Wire Line
 	6950 6200 7050 6200
 Wire Wire Line
 	4350 1500 4600 1500
-Wire Wire Line
-	4100 1700 4600 1700
 Connection ~ 4600 1500
 Wire Wire Line
 	4600 1500 5100 1500
-Connection ~ 4600 1700
 Wire Wire Line
 	4600 1700 5100 1700
 Wire Wire Line
@@ -1955,4 +1922,40 @@ Text GLabel 6750 3050 1    50   Input ~ 0
 COL10
 Text GLabel 7250 3050 1    50   Input ~ 0
 COL11
+Connection ~ 4600 1700
+Connection ~ 4100 1700
+Connection ~ 4100 1500
+Wire Wire Line
+	4100 1500 4350 1500
+Wire Wire Line
+	3600 1500 4100 1500
+Wire Wire Line
+	4100 1700 4350 1700
+$Comp
+L power:GND #PWR?
+U 1 1 62430518
+P 4350 1800
+F 0 "#PWR?" H 4350 1550 50  0001 C CNN
+F 1 "GND" H 4355 1627 50  0000 C CNN
+F 2 "" H 4350 1800 50  0001 C CNN
+F 3 "" H 4350 1800 50  0001 C CNN
+	1    4350 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 6242E627
+P 4100 1600
+F 0 "C?" H 4192 1646 50  0000 L CNN
+F 1 "C_Small" H 4192 1555 50  0000 L CNN
+F 2 "" H 4100 1600 50  0001 C CNN
+F 3 "~" H 4100 1600 50  0001 C CNN
+	1    4100 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 1800 4350 1700
+Connection ~ 4350 1700
+Wire Wire Line
+	4350 1700 4600 1700
 $EndSCHEMATC

@@ -2109,4 +2109,15 @@ COL12
 Wire Wire Line
 	7600 3100 7600 6000
 Connection ~ 6800 6400
+$Comp
+L Connector:USB_C_Receptacle_USB2.0 J?
+U 1 1 628B6CDF
+P 1000 1450
+F 0 "J?" H 1107 2317 50  0000 C CNN
+F 1 "USB_C_Receptacle_USB2.0" H 1107 2226 50  0000 C CNN
+F 2 "" H 1150 1450 50  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1150 1450 50  0001 C CNN
+	1    1000 1450
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

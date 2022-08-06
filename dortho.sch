@@ -2646,23 +2646,8 @@ F 3 "" H 1750 850 50  0001 C CNN
 	1    1750 850 
 	1    0    0    -1  
 $EndComp
-$Comp
-L Power_Protection:USBLC6-2SC6 U?
-U 1 1 630D6912
-P 2700 1700
-F 0 "U?" H 2700 2381 50  0000 C CNN
-F 1 "USBLC6-2SC6" H 2700 2290 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 1950 2100 50  0001 C CNN
-F 3 "http://www2.st.com/resource/en/datasheet/CD00050750.pdf" H 2900 2050 50  0001 C CNN
-	1    2700 1700
-	1    0    0    -1  
-$EndComp
-Text GLabel 1600 1600 2    50   Input ~ 0
-D-
 Wire Wire Line
 	1600 1550 1600 1650
-Text GLabel 1600 1400 2    50   Input ~ 0
-D+
 Wire Wire Line
 	1600 1350 1600 1450
 $Comp
@@ -2724,25 +2709,7 @@ F 3 "~" H 3050 850 50  0001 C CNN
 	1    3050 850 
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	1750 850  2700 850 
 Connection ~ 1750 850 
-Wire Wire Line
-	2700 1200 2700 850 
-Connection ~ 2700 850 
-Wire Wire Line
-	2700 850  2850 850 
-$Comp
-L power:GND #PWR?
-U 1 1 632ED364
-P 2700 2200
-F 0 "#PWR?" H 2700 1950 50  0001 C CNN
-F 1 "GND" H 2705 2027 50  0000 C CNN
-F 2 "" H 2700 2200 50  0001 C CNN
-F 3 "" H 2700 2200 50  0001 C CNN
-	1    2700 2200
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:D_Schottky D?
 U 1 1 632EE5EF
@@ -2769,4 +2736,47 @@ F 3 "" H 3850 850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3700 850  3850 850 
+Text GLabel 1600 1400 2    50   Input ~ 0
+D_BUS-
+Text GLabel 1600 1600 2    50   Input ~ 0
+D_BUS+
+Connection ~ 2700 850 
+Wire Wire Line
+	2700 850  2850 850 
+Wire Wire Line
+	1750 850  2700 850 
+Wire Wire Line
+	2700 1200 2700 850 
+Wire Wire Line
+	2700 1200 3000 1200
+Text GLabel 3500 1600 2    50   Input ~ 0
+D_BUS+
+Text GLabel 2500 1600 0    50   Input ~ 0
+D_BUS-
+$Comp
+L power:GND #PWR?
+U 1 1 632ED364
+P 3000 2200
+F 0 "#PWR?" H 3000 1950 50  0001 C CNN
+F 1 "GND" H 3005 2027 50  0000 C CNN
+F 2 "" H 3000 2200 50  0001 C CNN
+F 3 "" H 3000 2200 50  0001 C CNN
+	1    3000 2200
+	1    0    0    -1  
+$EndComp
+Text GLabel 2500 1800 0    50   Input ~ 0
+D+
+Text GLabel 3500 1800 2    50   Input ~ 0
+D-
+$Comp
+L Power_Protection:USBLC6-2SC6 U?
+U 1 1 630D6912
+P 3000 1700
+F 0 "U?" H 3000 2381 50  0000 C CNN
+F 1 "USBLC6-2SC6" H 3000 2290 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 2250 2100 50  0001 C CNN
+F 3 "http://www2.st.com/resource/en/datasheet/CD00050750.pdf" H 3200 2050 50  0001 C CNN
+	1    3000 1700
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
